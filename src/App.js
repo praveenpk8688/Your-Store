@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavBar from './Component/Layouts/NavBar';
+import {ChakraProvider, defaultSystem} from "@chakra-ui/react";
+import Sliders from './Component/Layouts/Sliders';
+
+import SpotlightCard from '../src/components/SpotlightCard/SpotlightCard.jsx';
+import CardGrid from './Component/Layouts/CardGrid.jsx';
+import Footer from './Component/Layouts/Footer.jsx';
+import Home from './Component/Pages/Home.jsx';
+
+
+
 
 function App() {
+
   return (
+    <ChakraProvider value={defaultSystem}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home />
+      {/* <NavBar /> */}
+      {/* <Sliders /> */}
+    
+     
+     {/* <CardGrid/> */}
+     {/* <Footer/> */}
+    
+ 
+      
+
+
+     
+      
+      
+    
     </div>
+    </ChakraProvider>
   );
 }
 
